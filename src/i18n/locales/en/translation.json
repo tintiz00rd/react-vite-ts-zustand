@@ -1,0 +1,7 @@
+{
+  "home": {
+    "title": "Welcome to my React + Vite + TS Template",
+    "description": "This is a base project with internationalization support using i18next.",
+    "footer": "Template created by Angelo Gabrielli 'tintiz00rd' Tinti"
+  }
+}
