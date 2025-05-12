@@ -8,29 +8,39 @@ export default function Home() {
   };
 
   return (
-    <div style={styles.container}>
-      <h1 style={styles.title}>{t('home.title')}</h1>
-      <p style={styles.description}>{t('home.description')}</p>
+    <div style={styles.wrapper}>
+      <div style={styles.container}>
+        <h1 style={styles.title}>{t('home.title')}</h1>
+        <p style={styles.description}>{t('home.description')}</p>
 
-      <div style={styles.languageSwitcher}>
-        <button onClick={() => switchLanguage('pt')}>🇧🇷 Português</button>
-        <button onClick={() => switchLanguage('en')}>🇺🇸 English</button>
+        <div style={styles.languageSwitcher}>
+          <button onClick={() => switchLanguage('pt')}>🇧🇷 Português</button>
+          <button onClick={() => switchLanguage('en')}>🇺🇸 English</button>
+        </div>
+
+        <footer style={styles.footer}>
+          <p>{t('home.footer')}</p>
+        </footer>
       </div>
-
-      <footer style={styles.footer}>
-        <p>{t('home.footer')}</p>
-      </footer>
     </div>
   );
 }
 
 const styles: Record<string, React.CSSProperties> = {
+  wrapper: {
+    height: '100vh',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   container: {
-    fontFamily: 'sans-serif',
-    padding: '2rem',
     textAlign: 'center',
+    padding: '2rem',
+    borderRadius: '12px',
+    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
     maxWidth: '600px',
-    margin: '0 auto',
+    width: '100%',
+    fontFamily: 'sans-serif',
   },
   title: {
     fontSize: '2rem',
@@ -47,7 +57,7 @@ const styles: Record<string, React.CSSProperties> = {
     marginBottom: '2rem',
   },
   footer: {
-    marginTop: '3rem',
+    marginTop: '1rem',
     fontSize: '0.9rem',
     color: '#666',
   },
