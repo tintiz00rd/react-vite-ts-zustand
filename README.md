@@ -1,54 +1,74 @@
-# React + TypeScript + Vite
+# React + Vite + TypeScript + Zustand + i18next Template
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A ready-to-use, opinionated template for React projects using Vite. Includes TypeScript, Zustand for state management, i18next for internationalization, and a powerful toolset for testing and code quality.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ⚡️ Stack
 
-## Expanding the ESLint configuration
+- [React 19](https://react.dev/)
+- [Vite 6](https://vitejs.dev/)
+- [TypeScript 5.8](https://www.typescriptlang.org/)
+- [Zustand 5](https://github.com/pmndrs/zustand) – State management
+- [i18next](https://www.i18next.com/) + [react-i18next](https://react.i18next.com/) – Internationalization
+- [ESLint 9](https://eslint.org/) – Linting
+- [Prettier 3](https://prettier.io/) – Code formatting
+- [Vitest 3](https://vitest.dev/) – Unit testing
+- [Testing Library](https://testing-library.com/) – For accessible, user-focused tests
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🚀 Getting Started
+
+To use this template:
+
+1. Click the **"Use this template"** button on the top-right of the repository page.
+2. Clone your new project.
+3. Install dependencies:
+
+```bash
+npm install
+````
+
+4. Start the development server:
+
+```bash
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📜 Available Scripts
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+| Script            | Description                   |
+| ----------------- | ----------------------------- |
+| `npm run dev`     | Start the development server  |
+| `npm run build`   | Build for production          |
+| `npm run preview` | Preview the production build  |
+| `npm run lint`    | Lint the project using ESLint |
+| `npm run format`  | Format code with Prettier     |
+| `npm run test`    | Run tests using Vitest        |
+
+---
+
+## 🤝 Contributing
+
+Suggestions, corrections, and improvements are very welcome!
+Feel free to open an issue or pull request.
+
+---
+
+## 👤 Author
+
+Created and maintained by **Angelo Gabrielli 'tintiz00rd' Tinti**  
+GitHub: [@tintiz00rd](https://github.com/tintiz00rd)  
+Contact: [angelo.tinti@gmail.com](mailto:angelo.tinti@gmail.com)  
+**TintiLabs** – Clean code, clean mind.
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT](./LICENSE).
+
+---
