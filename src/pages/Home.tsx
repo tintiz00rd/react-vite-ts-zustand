@@ -1,7 +1,13 @@
 import { useTranslation } from 'react-i18next';
+import { useCounterStore } from '../store/counter';
 
 export default function Home() {
-  const { t, i18n } = useTranslation();
+    const count = useCounterStore((state) => state.count);
+    const increment = useCounterStore((state) => state.increment);
+    const decrement = useCounterStore((state) => state.decrement);
+    const reset = useCounterStore((state) => state.reset);
+
+    const { t, i18n } = useTranslation();
 
   const switchLanguage = (lang: 'en' | 'pt') => {
     i18n.changeLanguage(lang);
@@ -16,6 +22,16 @@ export default function Home() {
         <div style={styles.languageSwitcher}>
           <button onClick={() => switchLanguage('pt')}>🇧🇷 Português</button>
           <button onClick={() => switchLanguage('en')}>🇺🇸 English</button>
+        </div>
+
+        <div>
+          <h2>{t('home.zustand.title')}</h2>
+          <h3>{count}</h3>
+          <div style={styles.zustandCounter}>
+            <button onClick={decrement}>-</button>
+            <button onClick={reset}>{t('home.zustand.reset')}</button>
+            <button onClick={increment}>+</button>
+          </div>
         </div>
 
         <footer style={styles.footer}>
@@ -61,4 +77,9 @@ const styles: Record<string, React.CSSProperties> = {
     fontSize: '0.9rem',
     color: '#666',
   },
+  zustandCounter: {
+    display: 'flex',
+    justifyContent: 'center',
+    gap: '1rem'
+  }
 };

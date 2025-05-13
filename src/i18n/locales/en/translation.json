@@ -1,7 +1,11 @@
 {
   "home": {
-    "title": "Welcome to my React + Vite + TS Template",
+    "title": "Welcome to my React + Vite + TS + Zustand Template",
     "description": "This is a base project with internationalization support using i18next.",
-    "footer": "Template created by Angelo Gabrielli 'tintiz00rd' Tinti"
+    "footer": "Template created by Angelo Gabrielli 'tintiz00rd' Tinti",
+		"zustand": {
+			"title": "Zustand Counter",
+			"reset": "Reset"
+		}
   }
 }
